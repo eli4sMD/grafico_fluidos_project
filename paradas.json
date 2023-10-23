@@ -1,0 +1,137 @@
+[
+    {
+      "Time": 0.917233,
+      "Pressure": 5298.44,
+      "Temperature": 169.39,
+      "Depth": 3790.0,
+      "Dp/Dz": null,
+      "Dt/Dz": null,
+      "Description": "PARADA N° 1"
+    },
+    {
+      "Time": 1.109221,
+      "Pressure": 4789.16,
+      "Temperature": 168.61,
+      "Depth": 3500.0,
+      "Dp/Dz": 1.75614,
+      "Dt/Dz": 0.00269,
+      "Description": "PARADA N° 2"
+    },
+    {
+      "Time": 1.4015,
+      "Pressure": 4064.65,
+      "Temperature": 166.17,
+      "Depth": 3000.0,
+      "Dp/Dz": 1.44902,
+      "Dt/Dz": 0.00488,
+      "Description": "PARADA N° 3"
+    },
+    {
+      "Time": 1.670856,
+      "Pressure": 3327.96,
+      "Temperature": 162.59,
+      "Depth": 2500.0,
+      "Dp/Dz": 1.47338,
+      "Dt/Dz": 0.00716,
+      "Description": "PARADA N° 4"
+    },
+    {
+      "Time": 1.974597,
+      "Pressure": 2521.77,
+      "Temperature": 157.05,
+      "Depth": 2000.0,
+      "Dp/Dz": 1.61238,
+      "Dt/Dz": 0.01108,
+      "Description": "PARADA N° 5"
+    },
+    {
+      "Time": 2.20097,
+      "Pressure": 1860.85,
+      "Temperature": 151.49,
+      "Depth": 1610.0,
+      "Dp/Dz": 1.69467,
+      "Dt/Dz": 0.01426,
+      "Description": "PARADA N° 6"
+    },
+    {
+      "Time": 2.284069,
+      "Pressure": 1845.76,
+      "Temperature": 151.78,
+      "Depth": 1590.0,
+      "Dp/Dz": 0.7545,
+      "Dt/Dz": 0.0145,
+      "Description": "PARADA N° 7"
+    },
+    {
+      "Time": 2.470326,
+      "Pressure": 1361.21,
+      "Temperature": 146.7,
+      "Depth": 1219.0,
+      "Dp/Dz": 1.30606,
+      "Dt/Dz": 0.01369,
+      "Description": "PARADA N° 8"
+    },
+    {
+      "Time": 2.539097,
+      "Pressure": 1244.6,
+      "Temperature": 146.19,
+      "Depth": 1199.0,
+      "Dp/Dz": 5.8305,
+      "Dt/Dz": 0.0255,
+      "Description": "PARADA N° 9"
+    },
+    {
+      "Time": 2.699564,
+      "Pressure": 981.65,
+      "Temperature": 142.06,
+      "Depth": 1009.0,
+      "Dp/Dz": 1.38395,
+      "Dt/Dz": 0.02174,
+      "Description": "PARADA N° 10"
+    },
+    {
+      "Time": 2.785529,
+      "Pressure": 1004.12,
+      "Temperature": 136.0,
+      "Depth": 989.0,
+      "Dp/Dz": 1.1235,
+      "Dt/Dz": 0.303,
+      "Description": "PARADA N° 11"
+    },
+    {
+      "Time": 3.074943,
+      "Pressure": 172.11,
+      "Temperature": 123.16,
+      "Depth": 212.0,
+      "Dp/Dz": 1.0708,
+      "Dt/Dz": 0.01653,
+      "Description": "PARADA N° 12"
+    },
+    {
+      "Time": 3.158042,
+      "Pressure": 219.93,
+      "Temperature": 122.25,
+      "Depth": 192.0,
+      "Dp/Dz": 2.391,
+      "Dt/Dz": 0.0455,
+      "Description": "PARADA N° 13"
+    },
+    {
+      "Time": 3.255468,
+      "Pressure": 167.78,
+      "Temperature": 125.09,
+      "Depth": 50.0,
+      "Dp/Dz": 0.36725,
+      "Dt/Dz": 0.02,
+      "Description": "PARADA N° 14"
+    },
+    {
+      "Time": 3.338568,
+      "Pressure": 67.55,
+      "Temperature": 112.97,
+      "Depth": 0.0,
+      "Dp/Dz": 2.0046,
+      "Dt/Dz": 0.2424,
+      "Description": "PARADA N° 15"
+    }
+  ]
