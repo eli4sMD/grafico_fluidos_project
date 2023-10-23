@@ -3,24 +3,31 @@ import { View, Text, ScrollView } from 'react-native';
 import { LineChart } from 'react-native-gifted-charts';
 import data from '../paradas.json';
 
+function calculateDensity(pressure, depth) {
+    let g = 9.81; // aceleración debido a la gravedad en m/s²
+    let pressureInPascals = pressure * 6894.76; // convertir la presión de psia a Pascales
+    let density = pressureInPascals / (g * depth); // calcular la densidad en kg/m³
+    return density;
+  }
+
 export default function ChartComponent() {
   // Crear arrays para presión, temperatura y profundidad
   const pressureData = data.map(item => ({ value: item.Pressure, dataPointText: `Profundidad: ${item.Depth}` }));
   const temperatureData = data.map(item => ({ value: item.Temperature, dataPointText: `Profundidad: ${item.Depth}` }));
 
-  // Tipos de fluido por parada
-  const fluidTypes = data.map(item => {
-    const density = item.Pressure / item.Depth;
+    // Tipos de fluido por parada
+    const fluidTypes = data.map(item => {
+    const density = calculateDensity(item.Pressure, item.Depth);
     let fluidType = "Desconocido";
     if (density >= 800 && density <= 900) {
-      fluidType = "Agua Salada";
+        fluidType = "Agua Salada";
     } else if (density > 900) {
-      fluidType = "Petróleo";
+        fluidType = "Petróleo";
     } else {
-      fluidType = "Gas";
+        fluidType = "Gas";
     }
     return fluidType;
-  });
+    });
 
   return (
     <ScrollView>
