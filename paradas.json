@@ -4,8 +4,8 @@
       "Pressure": 5298.44,
       "Temperature": 169.39,
       "Depth": 3790.0,
-      "Dp/Dz": null,
-      "Dt/Dz": null,
+      "Dp/Dz": 0,
+      "Dt/Dz": 0,
       "Description": "PARADA N° 1"
     },
     {
