@@ -20,9 +20,11 @@ export default function ChartComponent() {
   const temperatureData = data.map(item => ({ 
     value: item.Temperature, 
     depth: item.Depth,
+    label: item.Time,
     temp: item.Temperature,
     dataPointText: `Profundidad: ${item.Depth}`
   }));
+
   const fluidTypes = data.map(item => {
     const density = calculateDensity(item.Pressure, item.Depth);
     let fluidType = "Desconocido";
@@ -40,64 +42,82 @@ export default function ChartComponent() {
     <ScrollView>
       <View style={{marginTop: 30}}></View>
       <Text>Gráfico de Presión vs Profundidad</Text>
-      <LineChart
-        initialSpacing={20}
-        data={pressureData}
-        height={250}
-        maxValue={5800}
-        showVerticalLines
-        spacing={23}
-        color1="orange"
-        textColor1="green"
-        dataPointsHeight={6}
-        dataPointsWidth={6}
-        dataPointsColor1="blue"
-        textShiftY={-2}
-        textShiftX={-5}
-        textFontSize={11}
-        pointerConfig={{
-          pointerStripUptoDataPoint: true,
-          pointerStripColor: 'lightgray',
-          pointerStripWidth: 2,
-          strokeDashArray: [2, 5],
-          pointerColor: 'lightgray',
-          radius: 4,
-          pointerLabelWidth: 100,
-          pointerLabelHeight: 120,
-          pointerLabelComponent: items => {
-            const item = items[0];
-            console.log({item})
-            return (
-              <View
-                style={{
-                  height: 120,
-                  width: 100,
-                  backgroundColor: '#282C3E',
-                  borderRadius: 4,
-                  justifyContent:'center',
-                  paddingLeft:16,
-                }}>
-                <Text style={{color: 'lightgray',fontSize:12}}>Presión</Text>
-                <Text style={{color: 'white', fontWeight:'bold'}}>{item.value}</Text>
-                <Text style={{color: 'lightgray',fontSize:12,marginTop:12}}>Profundidad</Text>
-                <Text style={{color: 'white', fontWeight:'bold'}}>{item.depth}</Text>
-              </View>
-            );
-          },
-        }}
-        
-      />
+      <ScrollView horizontal={true}>
+        <LineChart
+          areaChart
+          initialSpacing={20}
+          data={pressureData}
+          height={280}
+          maxValue={5800}
+          showVerticalLines
+          backgroundColor="black"
+          startFillColor="rgba(20,105,81,0.3)"
+          endFillColor="rgba(20,85,81,0.01)"
+          startOpacity={0.9}
+          endOpacity={0.2}
+          spacing={75}
+          color1="orange"
+          textColor1="white"
+          hideRules
+          dataPointsHeight={6}
+          dataPointsWidth={6}
+          dataPointsColor1="blue"
+          yAxisColor="black"
+          xAxisColor="black"
+          yAxisTextStyle={{color: 'black'}}
+          textShiftY={-2}
+          textShiftX={-5}
+          textFontSize={11}
+          pointerConfig={{
+            pointerStripUptoDataPoint: true,
+            pointerStripColor: 'lightgray',
+            pointerStripWidth: 2,
+            strokeDashArray: [2, 5],
+            pointerColor: 'lightgray',
+            radius: 4,
+            pointerLabelWidth: 100,
+            pointerLabelHeight: 120,
+            pointerLabelComponent: items => {
+              const item = items[0];
+              return (
+                <View
+                  style={{
+                    height: 120,
+                    width: 100,
+                    backgroundColor: '#282C3E',
+                    borderRadius: 4,
+                    justifyContent:'center',
+                    paddingLeft:16,
+                  }}>
+                  <Text style={{color: 'lightgray',fontSize:12}}>Presión</Text>
+                  <Text style={{color: 'white', fontWeight:'bold'}}>{item.value}</Text>
+                  <Text style={{color: 'lightgray',fontSize:12,marginTop:12}}>Profundidad</Text>
+                  <Text style={{color: 'white', fontWeight:'bold'}}>{item.depth}</Text>
+                </View>
+              );
+            },
+          }}
+        />
+      </ScrollView>
       <Text>Gráfico de Temperatura vs Profundidad</Text>
+      <ScrollView horizontal={true}>
       <LineChart
+        areaChart
         initialSpacing={20}
         data={temperatureData}
-        height={350}
+        height={330}
         maxValue={65}
         yAxisOffset={110}
+        spacing={90}
+        hideRules
         showVerticalLines
-        spacing={23}
+        startFillColor="rgba(20,105,81,0.3)"
+        endFillColor="rgba(20,85,81,0.01)"
+        startOpacity={0.9}
+        endOpacity={0.2}
+        backgroundColor="black"
         color1="skyblue"
-        textColor1="green"
+        textColor1="white"
         dataPointsHeight={6}
         dataPointsWidth={6}
         dataPointsColor1="red"
@@ -115,7 +135,6 @@ export default function ChartComponent() {
           pointerLabelHeight: 120,
           pointerLabelComponent: (items) => {
             const item = items[0];
-            console.log(item)
             return (
               <View
                 style={{
@@ -135,6 +154,7 @@ export default function ChartComponent() {
           },
         }}
       />
+      </ScrollView>
       <Text>Tipos de Fluido por Parada:</Text>
       {fluidTypes.map((fluidType, index) => (
           <Text key={index}>{`PARADA N° ${index + 1}: ${fluidType}`}</Text>
