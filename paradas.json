@@ -6,7 +6,7 @@
       "Depth": 3790.0,
       "Dp/Dz": 0,
       "Dt/Dz": 0,
-      "Description": "PARADA N° 1"
+      "Description": "P 1"
     },
     {
       "Time": 1.109221,
@@ -15,7 +15,7 @@
       "Depth": 3500.0,
       "Dp/Dz": 1.75614,
       "Dt/Dz": 0.00269,
-      "Description": "PARADA N° 2"
+      "Description": "P 2"
     },
     {
       "Time": 1.4015,
@@ -24,7 +24,7 @@
       "Depth": 3000.0,
       "Dp/Dz": 1.44902,
       "Dt/Dz": 0.00488,
-      "Description": "PARADA N° 3"
+      "Description": "P 3"
     },
     {
       "Time": 1.670856,
@@ -33,7 +33,7 @@
       "Depth": 2500.0,
       "Dp/Dz": 1.47338,
       "Dt/Dz": 0.00716,
-      "Description": "PARADA N° 4"
+      "Description": "P 4"
     },
     {
       "Time": 1.974597,
@@ -42,7 +42,7 @@
       "Depth": 2000.0,
       "Dp/Dz": 1.61238,
       "Dt/Dz": 0.01108,
-      "Description": "PARADA N° 5"
+      "Description": "P 5"
     },
     {
       "Time": 2.20097,
@@ -51,7 +51,7 @@
       "Depth": 1610.0,
       "Dp/Dz": 1.69467,
       "Dt/Dz": 0.01426,
-      "Description": "PARADA N° 6"
+      "Description": "P 6"
     },
     {
       "Time": 2.284069,
@@ -60,7 +60,7 @@
       "Depth": 1590.0,
       "Dp/Dz": 0.7545,
       "Dt/Dz": 0.0145,
-      "Description": "PARADA N° 7"
+      "Description": "P 7"
     },
     {
       "Time": 2.470326,
@@ -69,7 +69,7 @@
       "Depth": 1219.0,
       "Dp/Dz": 1.30606,
       "Dt/Dz": 0.01369,
-      "Description": "PARADA N° 8"
+      "Description": "P 8"
     },
     {
       "Time": 2.539097,
@@ -78,7 +78,7 @@
       "Depth": 1199.0,
       "Dp/Dz": 5.8305,
       "Dt/Dz": 0.0255,
-      "Description": "PARADA N° 9"
+      "Description": "P 9"
     },
     {
       "Time": 2.699564,
@@ -87,7 +87,7 @@
       "Depth": 1009.0,
       "Dp/Dz": 1.38395,
       "Dt/Dz": 0.02174,
-      "Description": "PARADA N° 10"
+      "Description": "P 10"
     },
     {
       "Time": 2.785529,
@@ -96,7 +96,7 @@
       "Depth": 989.0,
       "Dp/Dz": 1.1235,
       "Dt/Dz": 0.303,
-      "Description": "PARADA N° 11"
+      "Description": "P 11"
     },
     {
       "Time": 3.074943,
@@ -105,7 +105,7 @@
       "Depth": 212.0,
       "Dp/Dz": 1.0708,
       "Dt/Dz": 0.01653,
-      "Description": "PARADA N° 12"
+      "Description": "P 12"
     },
     {
       "Time": 3.158042,
@@ -114,7 +114,7 @@
       "Depth": 192.0,
       "Dp/Dz": 2.391,
       "Dt/Dz": 0.0455,
-      "Description": "PARADA N° 13"
+      "Description": "P 13"
     },
     {
       "Time": 3.255468,
@@ -123,7 +123,7 @@
       "Depth": 50.0,
       "Dp/Dz": 0.36725,
       "Dt/Dz": 0.02,
-      "Description": "PARADA N° 14"
+      "Description": "P 14"
     },
     {
       "Time": 3.338568,
@@ -132,6 +132,6 @@
       "Depth": 0.0,
       "Dp/Dz": 2.0046,
       "Dt/Dz": 0.2424,
-      "Description": "PARADA N° 15"
+      "Description": "P 15"
     }
   ]

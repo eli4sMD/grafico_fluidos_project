@@ -13,16 +13,14 @@ function calculateDensity(pressure, depth) {
 export default function ChartComponent() {
   const pressureData = data.map(item => ({ 
     value: item.Pressure, 
-    label: item.Time,
+    label: item.Description,
     depth: item.Depth,
-    dataPointText: `Profundidad: ${item.Depth}` 
   }));
   const temperatureData = data.map(item => ({ 
     value: item.Temperature, 
     depth: item.Depth,
-    label: item.Time,
+    label: item.Description,
     temp: item.Temperature,
-    dataPointText: `Profundidad: ${item.Depth}`
   }));
 
   const fluidTypes = data.map(item => {
@@ -45,7 +43,7 @@ export default function ChartComponent() {
       <ScrollView horizontal={true}>
         <LineChart
           areaChart
-          initialSpacing={20}
+          initialSpacing={10}
           data={pressureData}
           height={280}
           maxValue={5800}
@@ -55,25 +53,26 @@ export default function ChartComponent() {
           endFillColor="rgba(20,85,81,0.01)"
           startOpacity={0.9}
           endOpacity={0.2}
-          spacing={75}
-          color1="orange"
+          spacing={54}
+          color1="skyblue"
           textColor1="white"
           hideRules
           dataPointsHeight={6}
           dataPointsWidth={6}
-          dataPointsColor1="blue"
+          verticalLinesColor={"skyblue"}
+          dataPointsColor1="red"
           yAxisColor="black"
           xAxisColor="black"
           yAxisTextStyle={{color: 'black'}}
           textShiftY={-2}
-          textShiftX={-5}
+          textShiftX={6}
           textFontSize={11}
           pointerConfig={{
             pointerStripUptoDataPoint: true,
             pointerStripColor: 'lightgray',
             pointerStripWidth: 2,
             strokeDashArray: [2, 5],
-            pointerColor: 'lightgray',
+            pointerColor: 'red',
             radius: 4,
             pointerLabelWidth: 100,
             pointerLabelHeight: 120,
@@ -83,11 +82,12 @@ export default function ChartComponent() {
                 <View
                   style={{
                     height: 120,
-                    width: 100,
+                    width: 120,
                     backgroundColor: '#282C3E',
                     borderRadius: 4,
                     justifyContent:'center',
                     paddingLeft:16,
+                    paddingRight:16
                   }}>
                   <Text style={{color: 'lightgray',fontSize:12}}>Presión</Text>
                   <Text style={{color: 'white', fontWeight:'bold'}}>{item.value}</Text>
@@ -103,33 +103,34 @@ export default function ChartComponent() {
       <ScrollView horizontal={true}>
       <LineChart
         areaChart
-        initialSpacing={20}
+        initialSpacing={10}
         data={temperatureData}
         height={330}
         maxValue={65}
         yAxisOffset={110}
-        spacing={90}
+        spacing={54}
         hideRules
         showVerticalLines
         startFillColor="rgba(20,105,81,0.3)"
         endFillColor="rgba(20,85,81,0.01)"
         startOpacity={0.9}
         endOpacity={0.2}
+        verticalLinesColor={"skyblue"}
         backgroundColor="black"
         color1="skyblue"
         textColor1="white"
         dataPointsHeight={6}
         dataPointsWidth={6}
         dataPointsColor1="red"
-        textShiftY={-6}
-        textShiftX={5}
+        textShiftY={-2}
+        textShiftX={6}
         textFontSize={11}
         pointerConfig={{
           pointerStripUptoDataPoint: true,
           pointerStripColor: 'lightgray',
           pointerStripWidth: 2,
           strokeDashArray: [2, 5],
-          pointerColor: 'lightgray',
+          pointerColor: 'red',
           radius: 4,
           pointerLabelWidth: 100,
           pointerLabelHeight: 120,
