@@ -11,20 +11,8 @@ function calculateDensity(pressure, depth) {
 }
 
 export default function ChartComponent() {
-  const pressureData = data.map(item => ({ 
-    value: item.Pressure, 
-    label: item.Description,
-    depth: item.Depth,
-  }));
-  const temperatureData = data.map(item => ({ 
-    value: item.Temperature, 
-    depth: item.Depth,
-    label: item.Description,
-    temp: item.Temperature,
-  }));
-
   const fluidTypes = data.map(item => {
-    const density = calculateDensity(item.Pressure, item.Depth);
+  const density = calculateDensity(item.Pressure, item.Depth);
     let fluidType = "Desconocido";
     if (density >= 800 && density <= 900) {
         fluidType = "Agua Salada";
@@ -35,6 +23,22 @@ export default function ChartComponent() {
     }
     return fluidType;
   });
+
+  const pressureData = data.map((item, index) => ({ 
+    value: item.Pressure, 
+    label: item.Description,
+    depth: item.Depth,
+    dataPointText: fluidTypes[index]
+  }));
+
+  const temperatureData = data.map((item, index) => ({ 
+    value: item.Temperature, 
+    depth: item.Depth,
+    label: item.Description,
+    temp: item.Temperature,
+    dataPointText: fluidTypes[index]
+  }));
+
    
   return (
     <ScrollView>
